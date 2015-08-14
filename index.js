@@ -81,7 +81,7 @@ exports.start = function (args, opts) {
     var autoUri = !!opts['auto-uri'];
 
     var bcs = require( './lib/sdk' );
-    var sdk = new bcs.BaiduCloudStorage( ak, sk, maxSize, autoUri );
+    var sdk = new bcs.BaiduCloudStorage( ak, sk, maxSize, true );
     return sdk.upload( bucket, file, target );
 };
 
